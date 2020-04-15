@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
+    <div id="modal-window">
+        <i class="fas fa-times-circle" onclick="modalWindowActivator()"></i>
+    </div>
     <header>
         <div class="logo">
             <h1>Logo</h1>
@@ -24,7 +27,7 @@
     </header>
     <section id="latest">
         <i class="fas fa-chevron-left" onclick="imageSliderLeft()"></i>
-        <div>
+        <div id="window">
             <div class="latest-movies-container">
                 <div class="movie-container">
                     <img class="latestImages" src="./natsu.jpg" alt="">

@@ -8,6 +8,20 @@ body{
     margin: 0px;
     padding: 0px;
 }
+#modal-window{
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    left: 5vw;
+    top: 105vh;
+    transition: 1s;
+    z-index: 100;
+    border-radius: 25px;
+    background-color: #fb9f89;
+}
+#modal-window.active-modal-window{
+    top: 5vh;
+}
 header{
     display: flex;
 }
@@ -40,7 +54,7 @@ header{
     justify-content: center;
     align-items: center;
 }
-#latest > div{
+#window{
     width: 50vw;
     overflow: hidden;
 }
