@@ -1,6 +1,7 @@
 const baseUrl = "https://api.themoviedb.org/3/";
 const apiKey = "3bd5a7563d2f1a399fa2c575c72eb467";
 const latestMovies = document.querySelectorAll(".movie-container")
+const bestMoviesContainer = document.querySelectorAll(".best")
 
 latestMovies.forEach(e => {
     e.lastElementChild.lastElementChild.addEventListener('click', modalWindowActivator);
@@ -12,18 +13,27 @@ function getConfig(){
     fetch(url).then(e => e.json()).then(e => {
         config = e;
         nowPlaying();
+        backgroundBaseUrl = config.images.secure_base_url + config.images.backdrop_sizes[1];
+        bestMovies();
     });
 }
 getConfig();
 
-/*var a;
-function lastMovies(){
-    var url = baseUrl + "movie/latest?api_key="+apiKey;
+var arrayOfBests,backgroundBaseUrl;;
+function bestMovies(){
+    var url = baseUrl + "trending/movie/day?api_key="+apiKey;
     fetch(url).then(e => e.json()).then(e => {
-        a=e
-        const slika = document.getElementById("slika").src = config.images.secure_base_url+config.images.poster_sizes[2]+a.poster_path;
+        arrayOfBests = e.results.sort((a,b) =>{
+            if(a.vote_average > b.vote_average) return -1;
+            else return 1;
+        });
+        arrayOfBests.splice(3,17);
+        bestMoviesContainer.forEach((e,i) => {
+            e.firstElementChild.src = backgroundBaseUrl + arrayOfBests[i].backdrop_path;
+            e.lastElementChild.innerText = arrayOfBests[i].original_title;
+        })
     });
-}*/
+}
 
 var arrayOfNows;
 function nowPlaying(){
@@ -71,7 +81,7 @@ function imageSliderRight(){
     },500);
 }
 
-const imageWindow = document.querySelector("#window");
+const imageWindow = document.querySelector("#latest");
 var windowFlag = false;
 imageWindow.addEventListener('mouseover', function(){windowFlag = true});
 imageWindow.addEventListener('mouseleave', function(){windowFlag = false});
@@ -94,7 +104,24 @@ function keyImageTracker(e){
 }
 
 const modalWindow = document.querySelector("#modal-window")
-
+var test;
 function modalWindowActivator(e){
+    if(e.target.dataset.moviearray == "arrayOfNows"){
+        test = e.target
+        var movieName = e.target.parentNode.firstElementChild.innerText;
+        modalWindow.children[1].innerText = movieName;
+
+        modalWindow.children[2].src = config.images.secure_base_url + config.images.backdrop_sizes[1] + arrayOfNows.find(e => e.title == movieName).backdrop_path; 
+
+        modalWindow.children[3].innerText = arrayOfNows.find(e => e.title == movieName).overview; 
+    }
     modalWindow.classList.toggle("active-modal-window");
+}
+function closeModalWindow(){
+    modalWindow.classList.toggle("active-modal-window");
+}
+
+function activateMenu(e){
+    document.querySelector(".menu").firstElementChild.classList.toggle("active");
+    e.classList.toggle("menu-button-active");
 }

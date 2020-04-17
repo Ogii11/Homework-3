@@ -1,13 +1,27 @@
 *{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
 }
 a{
     text-decoration: none;
+    color: black;
 }
 body{
     margin: 0px;
     padding: 0px;
 }
+main{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+/*
+main > div:first-child(){
+    flex: 2;
+}
+main > div:last-child(){
+    flex: 1;
+}*/
 #modal-window{
     position: fixed;
     width: 90vw;
@@ -18,36 +32,63 @@ body{
     z-index: 100;
     border-radius: 25px;
     background-color: #fb9f89;
+    text-align: center;
 }
 #modal-window.active-modal-window{
     top: 5vh;
 }
 header{
     display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 99;
+    background-color: #0000002e
 }
 .logo{
     flex: 1;
     text-align: center;
 }
+.logo > img {
+    width: 30%;
+}
 .nav-menu{
     flex: 2;
     display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .menu{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 .menu>ul{
     list-style-type: none;
+    position: relative;
+    left: 100%;
+    transition:all 0.5s cubic-bezier(.67,-0.38,.37,1.51);
+}
+.menu>ul.active{
+    left: 0%;
 }
 .menu>ul>li{
     margin: 5px 20px;
     padding: 10px;
     border-radius: 10px;
-    background-color: #72ddf7;
+    /*background-color: #72ddf7;*/
     float: right;
+    width: 70px;
+    text-align: center;
+}
+.menu-button{
+    transform: rotate(0deg);
+    transition: all 0.5s cubic-bezier(.67,-0.38,.37,1.51);
+}
+.menu-button.menu-button-active{
+    transform: rotate(360deg);
 }
 #latest{
     display: flex;
@@ -63,7 +104,6 @@ header{
     width: 83.5vw;
     position: relative;
     right: 33.5%;
-    /*animation: imageSlider 1s;*/
 }
 @keyframes imageSliderRight{
     0%{
@@ -110,4 +150,35 @@ header{
 }
 .latestImages{
     max-width: 100%;
+}
+.latest-and-side{
+    display: flex;
+    justify-content: space-around;
+}
+.best-container > div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.best{
+    /*margin: 5px 0 5px;
+    display: flex;
+    align-items: flex-start;*/
+    margin: 5px 0 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+.best > img {
+    width: 22vw;
+}
+.best > h3 {
+    text-decoration: underline;
+    text-decoration-color: aliceblue;
+}
+.fb-plugin{
+    padding: 10px 0 20px;
 }
