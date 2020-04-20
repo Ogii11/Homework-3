@@ -9,65 +9,109 @@
 </head>
 <body>
     <div id="modal-window">
-        <i class="fas fa-times-circle" onclick="modalWindowActivator()"></i>
+        <i class="fas fa-times-circle" onclick="closeModalWindow()"></i>
+        <h2>Title</h2>
+        <img src="./natsu.jpg" alt="">
+        <p></p>
+
     </div>
     <header>
         <div class="logo">
-            <h1>Logo</h1>
+            <img src="./res/images/moviePickerForLogo.png" alt="Logo">
         </div>
         <div class="nav-menu">
             <nav class="menu">
-                <ul>
+                <ul class="active">
                     <li><a href="">List</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Custom</a></li>
                 </ul>
             </nav>
         </div>
+        <i class="fas fa-bars fa-2x menu-button" onclick="activateMenu(this)"></i>
     </header>
-    <section id="latest">
-        <i class="fas fa-chevron-left" onclick="imageSliderLeft()"></i>
-        <div id="window">
-            <div class="latest-movies-container">
-                <div class="movie-container">
-                    <img class="latestImages" src="./natsu.jpg" alt="">
-                    <div class="division">
-                        <p>Title</p>
-                        <button>Read More</button>
+    <main>
+        <div>
+            <section class="latest-and-side">
+                <div id="latest">
+                    <i class="fas fa-chevron-left" onclick="imageSliderLeft()"></i>
+                    <div id="window">
+                        <div class="latest-movies-container">
+                            <div class="movie-container">
+                                <img class="latestImages" src="./natsu.jpg" alt="Movie poster">
+                                <div class="division">
+                                    <p>Title</p>
+                                    <button>Read More</button>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <img class="latestImages" src="./natsu.jpg" alt="Movie poster">
+                                <div class="division">
+                                    <p>Title</p>
+                                    <button data-moviearray="arrayOfNows">Read More</button>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <img class="latestImages" src="../natsu.jpg" alt="Movie poster">
+                                <div class="division">
+                                    <p>Title</p>
+                                    <button data-moviearray="arrayOfNows">Read More</button>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <img class="latestImages" src="../natsu.jpg" alt="Movie poster">
+                                <div class="division">
+                                    <p>Title</p>
+                                    <button data-moviearray="arrayOfNows">Read More</button>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <img class="latestImages" src="../natsu.jpg" alt="Movie poster">
+                                <div class="division">
+                                    <p>Title</p>
+                                    <button>Read More</button>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" onclick="imageSliderRight()"></i>
+                </div>
+            </section>
+        </div>
+        <div>
+            <div class="best-container">
+                <div>
+                    <h2>Best</h2>
+                    <i class="fas fa-medal fa-2x"></i>
+                </div>
+                <div class="best">
+                    <img src="natsu.jpg" alt="Movie poster">
+                    <div>
+                        <h5>Title</h5>
                     </div>
                 </div>
-                <div class="movie-container">
-                    <img class="latestImages" src="./natsu.jpg" alt="">
-                    <div class="division">
-                        <p>Title</p>
-                        <button>Read More</button>
+                <div class="best">
+                    <img src="natsu.jpg" alt="Movie poster">
+                    <div>
+                        <h5>Title</h5>
                     </div>
                 </div>
-                <div class="movie-container">
-                    <img class="latestImages" src="../natsu.jpg" alt="">
-                    <div class="division">
-                        <p>Title</p>
-                        <button>Read More</button>
+                <div class="best">
+                    <img src="natsu.jpg" alt="Movie poster">
+                    <div>
+                        <h5>Title</h5>
                     </div>
                 </div>
-                <div class="movie-container">
-                    <img class="latestImages" src="../natsu.jpg" alt="">
-                    <div class="division">
-                        <p>Title</p>
-                        <button>Read More</button>
-                    </div>
+            </div>
+            <div class="fb-plugin-container">
+                <div>
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                    <h2>Feed</h2>
                 </div>
-                <div class="movie-container">
-                    <img class="latestImages" src="../natsu.jpg" alt="">
-                    <div class="division">
-                        <p>Title</p>
-                        <button>Read More</button>
-                    </div>
-                </div>    
+                <iframe class="fb-plugin" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMovie-Picker-101614531527337&tabs=timeline&width=430&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="430" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
-        <i class="fas fa-chevron-right" onclick="imageSliderRight()"></i>
-    </section>
+    </main>
     <script src="./scripts/home.js"></script>
 </body>
 </html>
