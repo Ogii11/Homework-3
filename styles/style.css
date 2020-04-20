@@ -221,6 +221,7 @@ header{
     .nav-menu{
         flex:none;
         order: 3;
+        left: 0%;
     }
     .menu > ul{
         padding: 0;

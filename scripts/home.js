@@ -125,3 +125,22 @@ function activateMenu(e){
     document.querySelector(".menu").firstElementChild.classList.toggle("active");
     e.classList.toggle("menu-button-active");
 }
+
+window.addEventListener('resize',menuUpdate);
+
+var mflag = true,kflag = true;
+function menuUpdate(e){
+    if(e.originalTarget.innerWidth <= 600){
+        if(mflag){
+            document.querySelector(".menu").firstElementChild.classList.remove("active");
+            mflag = false;
+            kflag = true;
+        }
+    } else {
+        if(kflag){
+            document.querySelector(".menu").firstElementChild.classList.add("active");
+            mflag = true;
+            kflag = false;
+        }
+    }
+};
