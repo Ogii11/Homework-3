@@ -16,11 +16,13 @@ main{
     padding-bottom: 100px;
 }
 main > div:nth-child(1){
-    flex: 2;
+    flex: 3;
 }
 main> div:nth-child(2){
     flex: 1;
-    padding: 0 5% 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #modal-window{
     position: fixed;
@@ -99,7 +101,7 @@ header{
     align-items: center;
 }
 #window{
-    width: 50vw;
+    width: 88%;
     overflow: hidden;
 }
 .latest-movies-container{
@@ -146,13 +148,13 @@ header{
     border-radius: 15px;
     color: white;
     margin: 0 5px 0 0;
-    font-size: 1vw;
+    font-size: 100%;
 
 }
 .division p {
     margin: 5px;
     text-align: center;
-    font-size: 1vw;
+    font-size: 100%;
 }
 .latestImages{
     max-width: 100%;
@@ -161,33 +163,54 @@ header{
     display: flex;
     justify-content: space-around;
 }
+.best-container{
+    width: 90%;
+}
 .best-container > div:nth-child(1){
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.best-container > div:nth-child(1)>i{
+    color: gold;
+}
 .best{
-    /*margin: 5px 0 5px;
-    display: flex;
-    align-items: flex-start;*/
     margin: 5px 0 5px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     border: 2px solid aliceblue;
     border-radius: 10px;
-    padding: 10px;
+    overflow: hidden;
+    position: relative;
 }
 .best > img {
     width: 100%;
 }
-.best > h3 {
+.best > div {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.733);
+    position: absolute;
+}
+.best > div > h5 {
+    margin: 5px;
     text-decoration: underline;
     text-decoration-color: aliceblue;
     font-size: 100%;
 }
+.fb-plugin-container{
+    width: 90%;
+    overflow: hidden;
+    
+}
+.fb-plugin-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4064ac;
+}
 .fb-plugin{
-    padding: 10px 0 20px;
+    border-radius: 10px;
     width: 100%;
 }
 @media only screen and (max-width: 600px){

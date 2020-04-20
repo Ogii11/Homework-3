@@ -30,7 +30,7 @@ function bestMovies(){
         arrayOfBests.splice(3,17);
         bestMoviesContainer.forEach((e,i) => {
             e.firstElementChild.src = backgroundBaseUrl + arrayOfBests[i].backdrop_path;
-            e.lastElementChild.innerText = arrayOfBests[i].original_title;
+            e.lastElementChild.firstElementChild.innerText = arrayOfBests[i].original_title;
         })
     });
 }
@@ -130,17 +130,22 @@ window.addEventListener('resize',menuUpdate);
 
 var mflag = true,kflag = true;
 function menuUpdate(e){
-    if(e.originalTarget.innerWidth <= 600){
-        if(mflag){
-            document.querySelector(".menu").firstElementChild.classList.remove("active");
-            mflag = false;
-            kflag = true;
-        }
+    if(e == undefined && window.innerWidth <= 600){
+        document.querySelector(".menu").firstElementChild.classList.remove("active");
     } else {
-        if(kflag){
-            document.querySelector(".menu").firstElementChild.classList.add("active");
-            mflag = true;
-            kflag = false;
+        if(e.originalTarget.innerWidth <= 600){
+            if(mflag){
+                document.querySelector(".menu").firstElementChild.classList.remove("active");
+                mflag = false;
+                kflag = true;
+            }
+        } else {
+            if(kflag){
+                document.querySelector(".menu").firstElementChild.classList.add("active");
+                mflag = true;
+                kflag = false;
+            }
         }
     }
-};
+}
+menuUpdate();
