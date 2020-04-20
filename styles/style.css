@@ -1,14 +1,31 @@
 *{
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
+    /*font-family: Arial, Helvetica, sans-serif;*/
 }
 a{
     text-decoration: none;
+    color: black;
 }
 body{
     margin: 0px;
     padding: 0px;
     background: #dfdaff;
+}
+main{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+main > div:nth-child(1){
+    flex: 3;
+}
+main> div:nth-child(2){
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #modal-window{
     position: fixed;
@@ -20,37 +37,67 @@ body{
     z-index: 100;
     border-radius: 25px;
     background-color: #fb9f89;
+    text-align: center;
 }
 #modal-window.active-modal-window{
     top: 5vh;
 }
 header{
     display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 99;
+    background-color: #0000002e;
+    flex-wrap: wrap;
 }
 .logo{
     flex: 1;
     text-align: center;
-    margin-top: 10px;
-}   
+    margin-top: 10px; 
+}
+.logo > img {
+    width: 30%;
+}
 .nav-menu{
     flex: 2;
     display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .menu{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 .menu>ul{
     list-style-type: none;
+    position: relative;
+    left: 100%;
+    transition:all 0.5s cubic-bezier(.67,-0.38,.37,1.51);
+}
+.menu>ul.active{
+    left: 0%;
 }
 .menu>ul>li{
     margin: 5px 20px;
     padding: 10px;
     border-radius: 10px;
-    background-color: #72ddf7;
+    /*background-color: #72ddf7;*/
     float: right;
+    width: 70px;
+    text-align: center;
+}
+.menu-button{
+    text-align: center;
+    flex: 0.5;
+    transform: rotate(0deg);
+    transition: all 0.5s cubic-bezier(.67,-0.38,.37,1.51);
+}
+.menu-button.menu-button-active{
+    transform: rotate(360deg);
 }
 #latest{
     display: flex;
@@ -78,15 +125,14 @@ header{
     font-size: 17px;
 }
 #window{
-    width: 50vw;
+    width: 88%;
     overflow: hidden;
 }
 .latest-movies-container{
     display: flex;
-    width: 83.5vw;
+    width: 166.66%;
     position: relative;
     right: 33.5%;
-    /*animation: imageSlider 1s;*/
 }
 .top-rated-movies-container{
     display: flex;
@@ -136,10 +182,13 @@ header{
     border-radius: 15px;
     color: white;
     margin: 0 5px 0 0;
+    font-size: 100%;
+
 }
 .division p {
     margin: 5px;
     text-align: center;
+    font-size: 100%;
 }
 .latestImages{
     max-width: 100%;
@@ -250,4 +299,99 @@ footer hr{
     height: 40px;
     margin: 10px 15px 0 15px;
     cursor: pointer;
+}
+.latest-and-side{
+    display: flex;
+    justify-content: space-around;
+}
+.best-container{
+    width: 90%;
+}
+.best-container > div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.best-container > div:nth-child(1)>i{
+    color: gold;
+}
+.best{
+    margin: 5px 0 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.best > img {
+    width: 100%;
+}
+.best > div {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.733);
+    position: absolute;
+}
+.best > div > h5 {
+    margin: 5px;
+    text-decoration: underline;
+    text-decoration-color: aliceblue;
+    font-size: 100%;
+}
+.fb-plugin-container{
+    width: 90%;
+    overflow: hidden;
+    
+}
+.fb-plugin-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4064ac;
+}
+.fb-plugin{
+    border-radius: 10px;
+    width: 100%;
+}
+@media only screen and (max-width: 600px){
+    @keyframes imageSliderRight {
+        0%{
+            right: 50%;
+        } 
+        100%{
+            right: 100%;
+        }
+    }
+    @keyframes imageSliderLeft {
+        0%{
+            right:50%;
+        } 
+        100%{
+            right: 0%;
+        }
+    }
+    main{
+        flex-wrap: wrap;
+        padding-top: 70px;
+    }
+    #window{
+        width: 90vw;
+    }
+    .latest-movies-container{
+        width: 227.5vw;
+        right: 50%;
+    }
+    .nav-menu{
+        flex:none;
+        order: 3;
+        left: 0%;
+    }
+    .menu > ul{
+        padding: 0;
+        display: none;
+    }
+    .menu > ul.active{
+        display: block;
+    }
 }
