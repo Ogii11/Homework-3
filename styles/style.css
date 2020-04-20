@@ -1,5 +1,6 @@
 *{
     font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
@@ -7,6 +8,7 @@ a{
 body{
     margin: 0px;
     padding: 0px;
+    background: #dfdaff;
 }
 #modal-window{
     position: fixed;
@@ -28,7 +30,8 @@ header{
 .logo{
     flex: 1;
     text-align: center;
-}
+    margin-top: 10px;
+}   
 .nav-menu{
     flex: 2;
     display: flex;
@@ -54,6 +57,26 @@ header{
     justify-content: center;
     align-items: center;
 }
+#top-rated{
+    margin-bottom: 50px;
+}
+#top-rated h1{
+    text-align: center;
+}
+#moreButton{
+    display: block;
+    width: 120px;
+    height: 50px;
+    border: solid 1px black;
+    border-radius: 50px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #809bce, #72ddf7);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    margin-top: 20px;
+    font-size: 17px;
+}
 #window{
     width: 50vw;
     overflow: hidden;
@@ -64,6 +87,10 @@ header{
     position: relative;
     right: 33.5%;
     /*animation: imageSlider 1s;*/
+}
+.top-rated-movies-container{
+    display: flex;
+    justify-content: center;    
 }
 @keyframes imageSliderRight{
     0%{
@@ -82,6 +109,12 @@ header{
     }
 }
 .movie-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    position: relative;
+}
+.movie-picture-container{
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -110,4 +143,61 @@ header{
 }
 .latestImages{
     max-width: 100%;
+}
+.top-rated-images{
+    width: 210px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: -5px 5px 10px 5px gray;
+    margin: 5px;
+}
+
+.details{
+    width: 210px;
+    height: 300px;
+    position: absolute;
+    color: white;
+    background-color: #80808090;
+    border-radius: 15px;
+    display: none;
+    top: 0.4vw;
+    left: 0.4vw;
+    text-align: center;
+    overflow-y: hidden;
+}
+.movie-picture-container:hover .details{
+    display: block;
+    animation: showDetails .3s ease-in-out;
+}
+@keyframes showDetails{
+    0%{
+        opacity: 0;
+        top: -0.2vw;
+    }
+    100%{
+        opacity: 1;
+        top: 0.4vw;
+    }
+}
+.rate{
+    width: 80px;
+    text-align: center;
+    position: absolute;
+    background: #80808090;
+    border-radius: 15px;
+    top: 0.4vw;
+    left: 10vw;
+    color: white;
+    animation: showRate .3s ease-in-out;
+}
+@keyframes showRate{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.movie-picture-container:hover .rate{
+    display: none;
 }

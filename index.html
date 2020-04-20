@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Movies</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="icon" href="images/tabicon.png">
 </head>
 <body>
     <div id="modal-window">
@@ -13,7 +14,8 @@
     </div>
     <header>
         <div class="logo">
-            <h1>Logo</h1>
+            <!-- <h1>Logo</h1> -->
+            <img src="images/icons/logo.png" alt="">
         </div>
         <div class="nav-menu">
             <nav class="menu">
@@ -30,35 +32,35 @@
         <div id="window">
             <div class="latest-movies-container">
                 <div class="movie-container">
-                    <img class="latestImages" src="./natsu.jpg" alt="">
+                    <img class="latestImages" src="" alt="">
                     <div class="division">
                         <p>Title</p>
                         <button>Read More</button>
                     </div>
                 </div>
                 <div class="movie-container">
-                    <img class="latestImages" src="./natsu.jpg" alt="">
+                    <img class="latestImages" src="" alt="">
                     <div class="division">
                         <p>Title</p>
                         <button>Read More</button>
                     </div>
                 </div>
                 <div class="movie-container">
-                    <img class="latestImages" src="../natsu.jpg" alt="">
+                    <img class="latestImages" src="" alt="">
                     <div class="division">
                         <p>Title</p>
                         <button>Read More</button>
                     </div>
                 </div>
                 <div class="movie-container">
-                    <img class="latestImages" src="../natsu.jpg" alt="">
+                    <img class="latestImages" src="" alt="">
                     <div class="division">
                         <p>Title</p>
                         <button>Read More</button>
                     </div>
                 </div>
                 <div class="movie-container">
-                    <img class="latestImages" src="../natsu.jpg" alt="">
+                    <img class="latestImages" src="" alt="">
                     <div class="division">
                         <p>Title</p>
                         <button>Read More</button>
@@ -68,6 +70,85 @@
         </div>
         <i class="fas fa-chevron-right" onclick="imageSliderRight()"></i>
     </section>
+    
+    <section id="top-rated">
+            <h1>Top Rated Movies</h1>
+            <div id="top-rated-boxes">
+                <div class="top-rated-movies-container">
+                    <div class="movie-picture-container">
+                        <img class="top-rated-images" src="" alt="">
+                        <div class="details">
+                            <h3 class="movie_title"></h3>
+                            <h3 class="vote_average"></h3>
+                            <h3 class="release_date"></h3>
+                        </div>  
+                        <div class="rate">
+                            <h3 class="movie_rate"></h3>
+                        </div>
+                    </div>
+                    <div class="movie-picture-container">
+                        <img class="top-rated-images" src="" alt="">
+                        <div class="details">
+                            <h3 class="movie_title"></h3>
+                            <h3 class="vote_average"></h3>
+                            <h3 class="release_date"></h3>
+                        </div>
+                        <div class="rate">
+                            <h3 class="movie_rate"></h3>
+                        </div>
+                    </div>
+                    <div class="movie-picture-container">
+                        <img class="top-rated-images" src="" alt="">
+                        <div class="details">
+                            <h3 class="movie_title"></h3>
+                            <h3 class="vote_average"></h3>
+                            <h3 class="release_date"></h3>
+                        </div>
+                        <div class="rate">
+                            <h3 class="movie_rate"></h3>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="top-rated-movies-container">
+                    <div class="movie-picture-container">
+                        <img class="top-rated-images" src="" alt="">
+                        <div class="details">
+                            <h3 class="movie_title"></h3>
+                            <h3 class="vote_average"></h3>
+                            <h3 class="release_date"></h3>
+                        </div>
+                        <div class="rate">
+                            <h3 class="movie_rate"></h3>
+                        </div>
+                    </div>
+                    <div class="movie-picture-container">
+                        <img class="top-rated-images" src="" alt="">
+                        <div class="details">
+                            <h3 class="movie_title"></h3>
+                            <h3 class="vote_average"></h3>
+                            <h3 class="release_date"></h3>
+                        </div>
+                        <div class="rate">
+                            <h3 class="movie_rate"></h3>
+                        </div>
+                    </div>
+                    <div class="movie-picture-container">
+                        <img class="top-rated-images" src="" alt="">
+                        <div class="details">
+                            <h3 class="movie_title"></h3>
+                            <h3 class="vote_average"></h3>
+                            <h3 class="release_date"></h3>
+                        </div>
+                        <div class="rate">
+                            <h3 class="movie_rate"></h3>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            <button id="moreButton">Load More</button>
+    </section>
+
     <script src="./scripts/home.js"></script>
 </body>
 </html>
