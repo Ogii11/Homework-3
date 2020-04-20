@@ -91,7 +91,7 @@ setInterval(function(){
     if (!windowFlag) {
         imageSliderRight();
     }
-},3000)
+},3000);
 
 function keyImageTracker(e){
     if (windowFlag) {
