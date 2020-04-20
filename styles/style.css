@@ -201,3 +201,53 @@ header{
 .movie-picture-container:hover .rate{
     display: none;
 }
+
+footer{
+    width: 100%;
+    height: 360px;
+    background: linear-gradient(90deg, #809bce, #72ddf7);
+    padding: 40px;
+}
+.main_footer{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.site_map{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;  
+}
+.site_map a, .footer_more a{
+    margin-bottom: 10px;
+    color: black;
+}
+.site_map a:hover, .footer_more a:hover{
+    text-decoration: underline;
+}
+.footer_contact p{
+    font-size: 18px;
+    margin: 0;
+}
+.footer_more{
+    display: flex;
+    flex-direction: column;
+}
+footer hr{
+    margin-top: 40px;
+    width: 90%;
+    height: 1px;
+    color: black;
+    background-color: black;
+    border: none;
+}
+.social_media{
+    display: flex;
+    justify-content: center;
+}
+.social_media img{
+    width: 40px;
+    height: 40px;
+    margin: 10px 15px 0 15px;
+    cursor: pointer;
+}
