@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies</title>
+    <title>Movie Picker</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="icon" href="images/icons/tabicon.png">
+    <script src="https://kit.fontawesome.com/a328f27462.js"></script>
 </head>
 <body>
     <div id="modal-window">
@@ -18,18 +19,20 @@
     </div>
     <header>
         <div class="logo">
-            <img src="./res/images/moviePickerForLogo.png" alt="Logo">
+            <!-- <img src="./res/images/moviePickerForLogo.png" alt="Logo"> -->
+            <img src="images/icons/logo.png" alt="">
         </div>
         <div class="nav-menu">
-            <nav class="menu">
-                <ul class="active">
-                    <li><a href="">List</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Custom</a></li>
+            <!-- <nav class="menu"> -->
+                <ul>
+                    <li><a class="active" href="">Home</a></li>
+                    <li><a href="html/list.html">List</a></li>
+                    <li><a href="html/about.html">About Us</a></li>
+                    <li><a href="html/custom.html">Custom</a></li>
                 </ul>
-            </nav>
+            <!-- </nav> -->
         </div>
-        <i class="fas fa-bars fa-2x menu-button" onclick="activateMenu(this)"></i>
+        <!-- <i class="fas fa-bars fa-2x menu-button" onclick="activateMenu(this)"></i> -->
     </header>
     <main>
         <div>
@@ -159,7 +162,7 @@
         <div>
             <div class="best-container">
                 <div>
-                    <h2>Best</h2>
+                    <h2 style="color:rgb(255, 196, 0);font-weight:bold;font-size: 30px;">Best</h2>
                     <i class="fas fa-medal fa-2x"></i>
                 </div>
                 <div class="best">
@@ -193,6 +196,8 @@
     <footer>
         <div class="main_footer">
             <div>
+                <!-- <img src="images/icons/logo.png" alt=""> -->
+                <!-- <img class="footer_logo" src="./res/images/moviePickerForLogo.png" alt=""> -->
                 <img src="images/icons/logo.png" alt="">
             </div>
             <div class="site_map">
@@ -219,12 +224,19 @@
         </div>
         <hr>
         <div class="social_media">
-            <a href="#"><img src="images/icons/instagram.png" alt=""></a>
+            <!-- <a href="#"><img src="images/icons/instagram.png" alt=""></a>
             <a href="#"><img src="images/icons/facebook.png" alt=""></a>
             <a href="#"><img src="images/icons/twitter.png" alt=""></a>
             <a href="#"><img src="images/icons/youtube.png" alt=""></a>
             <a href="#"><img src="images/icons/mail.png" alt=""></a>
-            <a href="#"><img src="images/icons/linkedin.png" alt=""></a>
+            <a href="#"><img src="images/icons/linkedin.png" alt=""></a> -->
+            <i class="fab fa-instagram"></i>
+            <!-- <i class="fab fa-instagram-square"></i> -->
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fas fa-envelope"></i>
         </div>
     </footer>
     <script src="./scripts/home.js"></script>
