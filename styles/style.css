@@ -157,7 +157,6 @@ header{
     color: white;
     margin: 0 5px 0 0;
     font-size: 100%;
-
 }
 .division p {
     margin: 5px;
@@ -196,15 +195,26 @@ header{
     width: 100%;
 }
 .best > div {
+    padding: 5px 0 5px 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.733);
+    background-color: #aca6a6a6;
     position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.best > div > button{
+    background-image: linear-gradient(90deg, #809bce, #72ddf7);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    margin: 0 5px 0 0;
+    font-size: 100%;
 }
 .best > div > h5 {
     margin: 5px;
-    text-decoration: underline;
-    text-decoration-color: aliceblue;
     font-size: 100%;
+    color: white;
 }
 .fb-plugin-container{
     width: 90%;
