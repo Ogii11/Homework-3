@@ -34,7 +34,15 @@ main> div:nth-child(2){
     z-index: 100;
     border-radius: 25px;
     background-color: #fb9f89;
+    display: flex;
+    justify-content: center;
+}
+#modal-window > div {
+    flex: 0.5;
     text-align: center;
+}
+#modal-window > div > img{
+    max-width: 100%;
 }
 #modal-window.active-modal-window{
     top: 5vh;
@@ -236,6 +244,9 @@ header{
     }
     #window{
         width: 90vw;
+    }
+    #modal-window > div {
+        flex: 0.9;
     }
     .latest-movies-container{
         width: 227.5vw;

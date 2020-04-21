@@ -109,11 +109,11 @@ function modalWindowActivator(e){
     if(e.target.dataset.moviearray == "arrayOfNows"){
         test = e.target
         var movieName = e.target.parentNode.firstElementChild.innerText;
-        modalWindow.children[1].innerText = movieName;
+        modalWindow.firstElementChild.children[1].innerText = movieName;
 
-        modalWindow.children[2].src = config.images.secure_base_url + config.images.backdrop_sizes[1] + arrayOfNows.find(e => e.title == movieName).backdrop_path; 
+        modalWindow.firstElementChild.children[2].src = config.images.secure_base_url + config.images.backdrop_sizes[1] + arrayOfNows.find(e => e.title == movieName).backdrop_path; 
 
-        modalWindow.children[3].innerText = arrayOfNows.find(e => e.title == movieName).overview; 
+        modalWindow.firstElementChild.children[3].innerText = arrayOfNows.find(e => e.title == movieName).overview; 
     }
     modalWindow.classList.toggle("active-modal-window");
 }
