@@ -61,7 +61,7 @@ function topRated(){
         let movieReleaseDate=document.getElementsByClassName("release_date")
         let movieRate=document.getElementsByClassName("movie_rate")
         for(let i=0;i<topBoxes.length;i++){
-            topBoxes[i].firstElementChild.src="https://image.tmdb.org/t/p/w200/"+arrayOfTopRated[i].poster_path;
+            topBoxes[i].firstElementChild.src="https://image.tmdb.org/t/p/w300/"+arrayOfTopRated[i].poster_path;
             movieTitles[i].innerHTML=e.results[i].title
             movieVoteAverage[i].innerHTML=e.results[i].vote_average+'<img src="images/icons/star.png" alt="">';
             movieReleaseDate[i].innerHTML='<img src="images/icons/calendar.png" alt="">'+e.results[i].release_date;
