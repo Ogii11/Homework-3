@@ -41,6 +41,9 @@ main> div:nth-child(2){
     flex: 0.5;
     text-align: center;
 }
+#modal-window >div > i {
+    align-self: flex-end;
+}
 #modal-window > div > img{
     max-width: 100%;
 }

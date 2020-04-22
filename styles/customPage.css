@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html{
+    padding: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 4vw;
+    z-index: 99;
+    background: #dfdce3;
+}
+.logo {
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+}
+.logo > img {
+    width: 30%;
+    margin: 0;
+}
+.nav-menu {
+    flex: 3;
+    text-align: right;
+    padding-right: 5%;
+}
+.nav-menu ul {
+    list-style-type: none;
+}
+.nav-menu ul li {
+    margin: 0 7px 0 7px;
+    text-transform: uppercase;
+}
+.nav-menu > ul > li {
+    display: inline-block;
+}
+.nav-menu ul li a {
+    font-size: 20px;
+    color: #4abdac;
+    font-weight: bold;
+}
+.active {
+    border-bottom: solid 3px #fc4a1a;
+}
+
+
+main{
+    text-align: center;
+    padding: 100px 0 0 0 ;
+    justify-content: space-evenly;
+}
+#ideas-input {
+    display: flex;
+    text-align: center;
+}
+.idea-submit{
+    text-align: left;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.idea-submit > form {
+    width: 60%;
+    text-align: center;
+}
+.inputs-division{
+    display: flex;
+}
+.inputs-division > input[type="text"]{
+    width: 46%;
+}
+textarea[name="movieIdea"]{
+    width: 100%;
+}
+input{
+    margin: 2%;
+}
+input[type="submit"]{
+    width: 50%;
+    border: none;
+    background-color: #4abdac;
+    transition: 1s;
+    padding: 10px;
+}
+input[type="submit"]:hover{
+    background-color:#fc4a1a;
+}
+.idea-text{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+#ideas{
+    padding: 10px;
+}
+.idea{
+    background-color: rgba(209, 209, 209, 0.3);
+    padding: 1%;
+}
+footer {
+    width: 100%;
+    background: #dfdce3;
+    padding: 40px;
+}   
+.main_footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+}
+.main_footer > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-logo{
+    width: 80%;
+}
+.footer_contact > p{
+    margin: 5px;
+}
+.social_media {
+    display: flex;
+    justify-content: center;
+}
+.social_media > i {
+    color: #4abdac;
+    font-size: 33px;
+    margin: 10px 15px 0 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.social_media > i:hover {
+    color: #fc4a1a
+}
+.main_footer h3 {
+    color: #4abdac;
+}
+@media screen and (max-width:500px){
+    #ideas-input{
+        flex-direction: column;
+    }   
+    .idea-submit > form{
+        width: 90%;
+    }
+    .main_footer{
+        flex-direction: column;
+    }
+}
