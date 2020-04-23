@@ -1,0 +1,201 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" type="text/css" href="../styles/list.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ <div id="modal-window">
+        <i class="fas fa-times-circle" onclick="closeModalWindow()"></i>
+        <h2>Title</h2>
+        <img src="./natsu.jpg" alt="">
+        <p></p>
+    </div>
+    <header>
+        <div class="logo">
+            <!-- <img src="./res/images/moviePickerForLogo.png" alt="Logo"> -->
+            <img src="../images/icons/logo.png" alt="">
+        </div>
+        <div class="nav-menu">
+            <!-- <nav class="menu"> -->
+                <ul>
+                    <li><a  href="">Home</a></li>
+                    <li><a href="html/list.html" class="active">List</a></li>
+                    <li><a href="html/about.html">About Us</a></li>
+                    <li><a href="html/custom.html">Custom</a></li>
+                </ul>
+            <!-- </nav> -->
+        </div>
+        <!-- <i class="fas fa-bars fa-2x menu-button" onclick="activateMenu(this)"></i> -->
+    </header>
+    <div class="form-div">
+    <form class="search" action="/list.html">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </form>
+    <div class="filters">
+        <p class="sortby">Sort by</p>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="filter-button">Name</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#about">A-Z</a>
+              <a href="#base">Z-A</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="filter-button">Genre</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="genreinput" onkeyup="filterFunction()">
+              <a href="#about">Action</a>
+              <a href="#base">Comedy</a>
+              <a href="#blog">Horror</a>
+              <a href="#contact">Documentary</a>
+              <a href="#custom">Anime</a>
+              <a href="#support">Western</a>
+              <a href="#tools">Adventure</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="filter-button">Rated</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#about">Lowest</a>
+              <a href="#base">Heighest</a>
+            </div>
+          </div>
+        <input type="range" min="1995" max="2020" value="1" class="slider" id="myRange">
+         <button class="submit">Submit</button>
+    </div>
+    </div>
+    <section id="top-rated">
+        <h1>Results</h1>
+        <div id="top-rated-boxes">
+            <div class="top-rated-movies-container">
+                <div class="movie-picture-container">
+                    <img class="top-rated-images" src="" alt="">
+                    <div class="details">
+                        <h3 class="movie_title"></h3>
+                        <h3 class="vote_average"></h3>
+                        <h3 class="release_date"></h3>
+                    </div> 
+                    <p class="results-text">
+                        Info 1: Value 1<br>
+                        Info 2: Value 2<br>
+                        Info 3: Value 3<br>
+                        Info 4: Value 4<br>
+                    </p>
+                    <div class="rate">
+                        <h3 class="movie_rate"></h3>
+                    </div>
+                    
+                </div>
+                <div class="movie-picture-container">
+                    <img class="top-rated-images" src="" alt="">
+                    <div class="details">
+                        <h3 class="movie_title"></h3>
+                        <h3 class="vote_average"></h3>
+                        <h3 class="release_date"></h3>
+                    </div>
+                    <p class="results-text">
+                        Info 1: Value 1<br>
+                        Info 2: Value 2<br>
+                        Info 3: Value 3<br>
+                        Info 4: Value 4<br>
+                    </p>
+                    <div class="rate">
+                        <h3 class="movie_rate"></h3>
+                    </div>
+                </div>
+                </div>
+                <div class="top-rated-movies-container">
+                    <div class="movie-picture-container">
+                        <img class="top-rated-images" src="" alt="">
+                        <div class="details">
+                            <h3 class="movie_title"></h3>
+                            <h3 class="vote_average"></h3>
+                            <h3 class="release_date"></h3>
+                        </div>
+                        <p class="results-text">
+                            Info 1: Value 1<br>
+                            Info 2: Value 2<br>
+                            Info 3: Value 3<br>
+                            Info 4: Value 4<br>
+                        </p>
+                        <div class="rate">
+                            <h3 class="movie_rate"></h3>
+                        </div>
+                    </div>
+                    <div class="movie-picture-container">
+                        <img class="top-rated-images" src="" alt="">
+                        <div class="details">
+                            <h3 class="movie_title"></h3>
+                            <h3 class="vote_average"></h3>
+                            <h3 class="release_date"></h3>
+                        </div>
+                        <p class="results-text">
+                            Info 1: Value 1<br>
+                            Info 2: Value 2<br>
+                            Info 3: Value 3<br>
+                            Info 4: Value 4<br>
+                        </p>
+                        <div class="rate">
+                            <h3 class="movie_rate"></h3>
+                        </div>
+                    </div>
+                    </div>
+                </div>         
+            </div>
+            </section>
+    <footer>
+        <div class="main_footer">
+            <div>
+                <!-- <img src="images/icons/logo.png" alt=""> -->
+                <!-- <img class="footer_logo" src="./res/images/moviePickerForLogo.png" alt=""> -->
+                <img src="../images/icons/logo.png" alt="Logo">
+            </div>
+            <div class="site_map">
+                <h3>Navigation</h3>
+                <a href="#">Home</a>
+                <a href="#">News</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer_more">
+                <h3>More</h3>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms and conditions</a>
+            </div>
+            <div class="footer_contact">
+                <h3>Contact</h3>
+                <p>+33 248-687-7888</p>
+                <p>+33 849-231-4009</p>
+                <p>1441 EAST MAPLE RD.</p>
+                <p>SUITE 200</p>
+                <p>TROY,MI 48083</p>
+            </div>
+        </div>
+        <hr>
+        <div class="social_media">
+            <!-- <a href="#"><img src="images/icons/instagram.png" alt=""></a>
+            <a href="#"><img src="images/icons/facebook.png" alt=""></a>
+            <a href="#"><img src="images/icons/twitter.png" alt=""></a>
+            <a href="#"><img src="images/icons/youtube.png" alt=""></a>
+            <a href="#"><img src="images/icons/mail.png" alt=""></a>
+            <a href="#"><img src="images/icons/linkedin.png" alt=""></a> -->
+            <i class="fab fa-instagram"></i>
+            <!-- <i class="fab fa-instagram-square"></i> -->
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fas fa-envelope"></i>
+        </div>
+    </footer>
+    <script src="./scripts/home.js"></script>
+</body>
+</html>
