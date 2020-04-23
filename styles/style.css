@@ -39,7 +39,18 @@ main> div:nth-child(2){
     z-index: 100;
     border-radius: 25px;
     background-color: #fb9f89;
+    display: flex;
+    justify-content: center;
+}
+#modal-window > div {
+    flex: 0.5;
     text-align: center;
+}
+#modal-window >div > i {
+    align-self: flex-end;
+}
+#modal-window > div > img{
+    max-width: 100%;
 }
 #modal-window.active-modal-window{
     top: 5vh;
@@ -135,7 +146,7 @@ header{
         right: 33.2%;
     } 
     100%{
-        right: 66.4%;
+        right: 66.5%;
     }
 }
 @keyframes imageSliderLeft{
@@ -176,7 +187,6 @@ header{
     color: white;
     margin: 0 5px 0 0;
     font-size: 100%;
-
 }
 .division button:hover{
     background: linear-gradient(10deg,#4abdac,#dfdce3);
@@ -345,15 +355,26 @@ footer hr{
     width: 100%;
 }
 .best > div {
+    padding: 5px 0 5px 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.733);
+    background-color: #aca6a6a6;
     position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.best > div > button{
+    background-image: linear-gradient(90deg, #809bce, #72ddf7);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    margin: 0 5px 0 0;
+    font-size: 100%;
 }
 .best > div > h5 {
     margin: 5px;
-    text-decoration: underline;
-    text-decoration-color: aliceblue;
     font-size: 100%;
+    color: white;
 }
 .fb-plugin-container{
     width: 90%;
@@ -393,6 +414,9 @@ footer hr{
     }
     #window{
         width: 90vw;
+    }
+    #modal-window > div {
+        flex: 0.9;
     }
     .latest-movies-container{
         width: 227.5vw;

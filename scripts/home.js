@@ -6,7 +6,7 @@ const bestMoviesContainer = document.querySelectorAll(".best")
 latestMovies.forEach(e => {
     e.lastElementChild.lastElementChild.addEventListener('click', modalWindowActivator);
 })
-
+document.querySelectorAll(".best-button").forEach(e => e.addEventListener('click', modalWindowActivator));
 var config;
 function getConfig(){
     var url = baseUrl+"configuration?api_key="+apiKey;
@@ -137,17 +137,26 @@ function keyImageTracker(e){
     }
 }
 
+
 const modalWindow = document.querySelector("#modal-window")
 var test;
 function modalWindowActivator(e){
     if(e.target.dataset.moviearray == "arrayOfNows"){
         test = e.target
         var movieName = e.target.parentNode.firstElementChild.innerText;
-        modalWindow.children[1].innerText = movieName;
+        modalWindow.firstElementChild.children[1].innerText = movieName;
 
-        modalWindow.children[2].src = config.images.secure_base_url + config.images.backdrop_sizes[1] + arrayOfNows.find(e => e.title == movieName).backdrop_path; 
+        modalWindow.firstElementChild.children[2].src = config.images.secure_base_url + config.images.backdrop_sizes[1] + arrayOfNows.find(e => e.title == movieName).backdrop_path; 
 
-        modalWindow.children[3].innerText = arrayOfNows.find(e => e.title == movieName).overview; 
+        modalWindow.firstElementChild.children[3].innerText = arrayOfNows.find(e => e.title == movieName).overview; 
+    } else if(e.target.dataset.moviearray == "arrayOfBests"){
+        test = e.target
+        var movieName = e.target.parentNode.firstElementChild.innerText;
+        modalWindow.firstElementChild.children[1].innerText = movieName;
+
+        modalWindow.firstElementChild.children[2].src = config.images.secure_base_url + config.images.backdrop_sizes[1] + arrayOfBests.find(e => e.title == movieName).backdrop_path; 
+
+        modalWindow.firstElementChild.children[3].innerText = arrayOfBests.find(e => e.title == movieName).overview; 
     }
     modalWindow.classList.toggle("active-modal-window");
 }
