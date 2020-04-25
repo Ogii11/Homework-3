@@ -148,7 +148,7 @@ input[type="submit"]:hover{
     transition: 0.5s;
 }
 .social_media > i:hover {
-    color: #fc4a1a
+    color: #fc4a1a;
 }
 .main_footer h3 {
     color: #4abdac;
