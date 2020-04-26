@@ -98,6 +98,11 @@ header{
 }
 #top-rated h1{
     text-align: center;
+    color: gray;
+    border-bottom: solid 3px orangered;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 #moreButton{
     display: block;
@@ -129,6 +134,11 @@ header{
 .top-rated-movies-container{
     display: flex;
     justify-content: center;
+    height: 30vw;
+}
+#top-rated-boxes{
+    margin-left: 40px;
+    margin-right: 40px;
 }
 @keyframes imageSliderRight{
     0%{
@@ -155,8 +165,11 @@ header{
 .movie-picture-container{
     display: flex;
     flex-direction: column;
+    flex:1;
     margin: 10px;
     position: relative;
+    overflow: hidden;
+    border-radius: 15px;
 }
 .division{
     display: flex;
@@ -190,40 +203,27 @@ header{
     max-width: 100%;
 }
 .top-rated-images{
-    width: 20vw;
-    height: 27vw;
+    width:100%;
+    height: 100%;
     border-radius: 15px;
     box-shadow: -5px 5px 10px 5px gray;
-    margin: 5px;
 }
 
 .details{
-    width: 20vw;
-    height: 27vw;
+    width: 100%;
+    height: 100%;
     position: absolute;
     color: white;
     background-color: #80808090;
-    border-radius: 1vw;
+    border-radius: 15px;
     display: none;
-    top: 0.4vw;
-    left: 0.36vw;
     text-align: center;
     font-size: 1.5vw;
     padding: 1vw;
 }
 .movie-picture-container:hover .details{
     display: block;
-    animation: showDetails .3s ease-in-out;
-}
-@keyframes showDetails{
-    0%{
-        opacity: 0;
-        top: -0.2vw;
-    }
-    100%{
-        opacity: 1;
-        top: 0.4vw;
-    }
+    animation-duration: .4s;
 }
 .rate{
     width: 6vw;
@@ -231,19 +231,8 @@ header{
     position: absolute;
     background: #80808090;
     border-radius: 1vw;
-    top: 0.4vw;
-    left: 14.4vw;
     color: white;
-    animation: showRate .3s ease-in-out;
     font-size: 1.3vw;
-}
-@keyframes showRate{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
 }
 .movie-picture-container:hover .rate{
     display: none;
@@ -309,12 +298,6 @@ footer hr{
 .social_media{
     display: flex;
     justify-content: center;
-}
-.social_media img{
-    width: 40px;
-    height: 40px;
-    margin: 10px 15px 0 15px;
-    cursor: pointer;
 }
 .latest-and-side{
     display: flex;
@@ -409,5 +392,19 @@ footer hr{
     }
     .menu > ul.active{
         display: block;
+    }
+    #top-rated h1{
+        width: 60%;
+    }
+    .top-rated-movies-container{
+        flex-direction: column;
+        height: 250vw;
+    }
+    .details{
+        font-size: 20px;
+    }
+    .rate{
+        font-size: 20px;
+        width: 20%;
     }
 }
