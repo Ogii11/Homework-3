@@ -27,7 +27,8 @@ function loadStories(e){
     ideaContainer.appendChild(ideaDiv);
 }
 
-function sendStory(){
+function sendStory(e){
+    if(e.parentNode.children[1].value == "") return
     var ntitle = document.querySelector('input[name="title"]').value;
     var nauthor = document.querySelector('input[name="author"]').value;
     var nstory = document.querySelector('#story').value;

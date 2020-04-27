@@ -46,14 +46,14 @@ textarea[name="movieIdea"]{
 input{
     margin: 2%;
 }
-input[type="submit"]{
+input[type="button"]{
     width: 50%;
     border: none;
     background-color: #4abdac;
     transition: 1s;
     padding: 10px;
 }
-input[type="submit"]:hover{
+input[type="button"]:hover{
     background-color:#fc4a1a;
 }
 .idea-text{
