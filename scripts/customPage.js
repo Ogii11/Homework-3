@@ -40,12 +40,12 @@ function sendStory(){
     toSend = {results:storiesArray};
     let url = "https://jsonblob.com/api/jsonBlob/a5822d28-887e-11ea-a41c-37ad6c9297da";
     fetch(url,{
-        method: 'POST',
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(toSend)})
     .then((response) => response.json())
     .then((data) => console.log(data))
-    .catch((error) => console.log(error))
+    //.catch((error) => console.log(error))
 }
