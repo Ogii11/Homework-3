@@ -31,13 +31,13 @@
         <h1>Got your own idea? Share it with us!</h1>
         <section id="ideas-input">
             <div class="idea-submit">
-                <form action="">
+                <form>
                     <div class="inputs-division">
-                        <input type="text" name="" placeholder="Your name">
-                        <input type="text" name="" placeholder="Story title">
+                        <input type="text" name="author" placeholder="Your name">
+                        <input type="text" name="title" placeholder="Story title">
                     </div>
-                    <textarea name="movieIdea" id="" cols="" rows="10"></textarea><br>
-                    <input type="submit" value="Submit">
+                    <textarea name="movieIdea" id="story" rows="10"></textarea><br>
+                    <input type="submit" value="Submit" onclick="sendStory()">
                 </form>
             </div>
             <div class="idea-text">
@@ -45,11 +45,6 @@
             </div>
         </section>
         <section id="ideas">
-            <div class="idea">
-                <h3 class="story-name">A nameless moster</h3>
-                <p class="story">Once upon a time, there was a monster without a name. He wanted his name so hard that he decided to search the world for the name that would suit him the best. But world was to big for him so he had to split, his first half went to the east and his second half to the west...</p>
-                <h3 class="author">by Klaus Poppe</h3>
-            </div>
         </section>
     </main>
     <footer>
