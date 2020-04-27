@@ -43,6 +43,7 @@ i.menu-button{
 }
 
 footer {
+    box-sizing: border-box;
     width: 100%;
     background: #dfdce3;
     padding: 40px;

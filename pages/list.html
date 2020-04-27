@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/list.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- <img src="./res/images/moviePickerForLogo.png" alt="Logo"> -->
+            <img src="../res/images/moviePickerForLogo.png" alt="">
+            <i class="fas fa-bars fa-2x menu-button" onclick="activateMenu(this)"></i>
+        </div>
+        <div class="nav-menu">
+            <!-- <nav class="menu"> -->
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a class="active" href="">List</a></li>
+                    <li><a href="./aboutUs.html">About Us</a></li>
+                    <li><a href="./customPage.html">Custom</a></li>
+                </ul>
+            <!-- </nav> -->
+        </div>
+        <!-- <i class="fas fa-bars fa-2x menu-button" onclick="activateMenu(this)"></i> -->
+    </header>
+    <main>    
+        <div class="form-div">
+            <input type="text" placeholder="Search.." onkeydown="searchIfEnter(event)" name="search">
+            <button type="submit" onclick="search(true)"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="filters">
+            <p class="sortby">Sorting and filtering</p>
+            <div class="filter-items">
+                <div class="filter-buttons">
+                    <div class="dropdown">
+                        <button disabled onclick="myFunction()" class="filter-button">Name</button>
+                        <div class="dropdown-content">
+                            <a onclick="disableSort()" class="active-sort-option">Disable</a>
+                            <a onclick="activeSortAZ()">A-Z</a>
+                            <a onclick="activeSortZA()">Z-A</a>
+                        </div>
+                    </div>     
+                    <div class="dropdown">
+                        <button disabled onclick="myFunction()" class="filter-button">Rated</button>
+                        <div class="dropdown-content">
+                            <a data-way="none">None</a>
+                            <a data-way="low">Lowest</a>
+                            <a data-way="high">Highest</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button disabled onclick="myFunction()" class="filter-button">Genre</button>
+                        <div class="dropdown-content">
+                            <a data-id="all">All</a>
+                            <a data-id="28">Action</a>
+                            <a data-id="12">Advanture</a>
+                            <a data-id="16">Anime</a>
+                            <a data-id="35">Comedy</a>
+                            <a data-id="80">Crime</a>
+                            <a data-id="99">Documentary</a>
+                            <a data-id="18">Drama</a>
+                            <a data-id="10751">Family</a>
+                            <a data-id="14">Fantasy</a>
+                            <a data-id="36">History</a>
+                            <a data-id="27">Horror</a>
+                            <a data-id="10402">Music</a>
+                            <a data-id="9648">Mystery</a>
+                            <a data-id="10749">Romance</a>
+                            <a data-id="878">Science Fiction</a>
+                            <a data-id="10770">TV Movie</a>
+                            <a data-id="53">Thriler</a>
+                            <a data-id="10752">War</a>
+                            <a data-id="37">Western</a>
+                        </div>
+                    </div>
+                </div>
+                <input title="Minimal grade" type="range" min="0" max="10" value="0" class="slider">
+            </div>
+        </div>
+        <section id="top-rated">
+            <h1>Results</h1>
+            <div id="top-rated-boxes">
+            </div>
+        </section>
+        <section class="pages">
+            
+        </section>
+    </main>
+    <footer>
+        <div class="main_footer">
+            <div>
+                <img class="footer-logo" src="../res/images/moviePickerForLogo.png" alt="">
+                <!-- <img class="footer_logo" src="./res/images/moviePickerForLogo.png" alt=""> -->
+                <!--<img src="images/icons/logo.png" alt="">-->
+            </div>
+            <div class="site_map">
+                <h3>Navigation</h3>
+                <a href="#">Home</a>
+                <a href="#">News</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer_more">
+                <h3>More</h3>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms and conditions</a>
+            </div>
+            <div class="footer_contact">
+                <h3>Contact</h3>
+                <p>+33 248-687-7888</p>
+                <p>+33 849-231-4009</p>
+                <p>1441 EAST MAPLE RD.</p>
+                <p>SUITE 200</p>
+                <p>TROY,MI 48083</p>
+            </div>
+        </div>
+        <hr>
+        <div class="social_media">
+            <!-- <a href="#"><img src="images/icons/instagram.png" alt=""></a>
+            <a href="#"><img src="images/icons/facebook.png" alt=""></a>
+            <a href="#"><img src="images/icons/twitter.png" alt=""></a>
+            <a href="#"><img src="images/icons/youtube.png" alt=""></a>
+            <a href="#"><img src="images/icons/mail.png" alt=""></a>
+            <a href="#"><img src="images/icons/linkedin.png" alt=""></a> -->
+            <i class="fab fa-instagram"></i>
+            <!-- <i class="fab fa-instagram-square"></i> -->
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fas fa-envelope"></i>
+        </div>
+    </footer>
+    <script src="../scripts/list.js"></script>
+    <script src="../scripts/headerScript.js"></script>
+</body>
+</html>
