@@ -31,7 +31,7 @@ function bestMovies(){
         arrayOfBests.splice(3,17);
         bestMoviesContainer.forEach((e,i) => {
             e.firstElementChild.src = backgroundBaseUrl + arrayOfBests[i].backdrop_path;
-            e.lastElementChild.firstElementChild.innerText = arrayOfBests[i].original_title;
+            e.lastElementChild.firstElementChild.innerText = arrayOfBests[i].title;
         })
     });
 }
